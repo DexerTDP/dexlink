@@ -6,36 +6,33 @@
     --font: 'Roboto', sans-serif;
 }
 
-html {
-    /*FONT:*/   
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
     font-family: var(--font);
     color: var(--textColor);
     font-size: 18px; 
     font-weight: 400;
-
-    /*BACKGROUND:*/
-    background: url('https://gif.plaza.one/43.gif');
-    background-repeat: no-repeat;
+    background: url('https://gif.plaza.one/43.gif') no-repeat center center fixed;
     background-size: cover;
-    background-attachment: fixed;
-    
-    display: -webkit-box;
-    
-    display: -ms-flexbox;
-    
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
 }
 
 body {
-    margin: 10px auto; /*auto - center the linktree*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.element {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
 }
 
 img {
@@ -43,11 +40,11 @@ img {
     height: 130px;
     display: block;
     margin: 20px auto;
-    border-radius: 50%; /*round image*/
+    border-radius: 50%;
 }
 
 #userName {
-    font-weight: 700; /*bold*/
+    font-weight: 700;
 }
 
 #description {
@@ -55,34 +52,23 @@ img {
 }
 
 main {
-    width: auto;
     max-width: 500px;
     margin: 15px auto;
 }
 
-/*LINKS*/
 a {
-    /*LINKS TEXT*/
     color: var(--textColor);
     text-decoration: none;
     text-align: center;
-
-    /*LINKS BORDER:*/
     border: 2px solid var(--textColor);
     border-radius: 10px;
-
-    display: block; /*each link takes a whole line*/
+    display: block;
     margin: 10px;
     padding: 10px;
-    -webkit-transition: .2s;
-    -o-transition: .2s;
     transition: .2s;
 }
 
 a:hover {
     background-color: var(--textColor);
     color: var(--invertColor);
-    -webkit-transition: .2s;
-    -o-transition: .2s;
-    transition: .2s;
 }
