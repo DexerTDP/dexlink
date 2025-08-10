@@ -52,6 +52,28 @@
     </a>
   </main>
 
-	<audio id="bg-audio" src="https://radio.plaza.one/mp3" loop aria-hidden="true"></audio
+ <!-- Hidden audio element -->
+  <audio id="bg-audio" src="https://radio.plaza.one/mp3" loop></audio>
+
+  <script>
+    const audio = document.getElementById('bg-audio');
+
+    async function startAudio() {
+      try {
+        await audio.play();
+        console.log('Playback started—aesthetic waves commence.');
+      } catch (err) {
+        console.error('Playback failed:', err);
+      }
+      // Ensures this only runs once
+      ['scroll', 'click', 'touchstart'].forEach(evt =>
+        window.removeEventListener(evt, startAudio)
+      );
+    }
+
+    ['scroll', 'click', 'touchstart'].forEach(evt =>
+      window.addEventListener(evt, startAudio, { once: true })
+    );
+  </script>
 </body>
 </html>
