@@ -56,6 +56,22 @@ main {
     margin: 15px auto;
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding: 12px 20px;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.05em;
+}
+
+footer i {
+  margin-right: 6px;
+  font-size: 0.7rem;
+}
+
 a {
     color: var(--textColor);
     text-decoration: none;
