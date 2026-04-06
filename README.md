@@ -1,6 +1,6 @@
 # Dexlink
 
-![dexlink](images/dexlink.png)
+![dexlink](images/dexlink.jpg)
 
 A simple linktree site to consolidate all my social network profiles in one place.
 
